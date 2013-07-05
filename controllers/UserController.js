@@ -1,8 +1,8 @@
 var MVC = require('../lib/MVC.js'),
     mvc = MVC();
 
-module.exports = mvc.controller('User', [
-    mvc.Action('index', function (id) {
+module.exports = mvc.Controller('User', [
+    mvc.action('index', function (id) {
         this.response().send('USER!!!');
     })
 ]);
