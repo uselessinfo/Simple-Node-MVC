@@ -4,7 +4,7 @@ var express = require('express'),
     mvc = MVC(),
     router = new mvc.Router();
 
-mvc.config(require('./config.js'));
+mvc.setConfig(require('./config.js'));
 
 //Load controllers
 router.loadControllers();
@@ -19,4 +19,4 @@ app.post('*', function (req, res) {
 
 app.use(express.static(__dirname + '/assets'));
 
-app.listen(mvc.CONFIG.serverPort);
+app.listen(mvc.config.serverPort);
