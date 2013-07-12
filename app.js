@@ -17,6 +17,6 @@ app.post('*', function (req, res) {
     router.route(req, res);
 });
 
-app.use(express.static(__dirname + '/assets'));
+app.use(express.static(__dirname + '/public'));
 
 app.listen(mvc.config.serverPort);

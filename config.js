@@ -6,7 +6,8 @@ var config = {
     "actionNotFound": "notFound",
     "controllerPath": "controllers",
     "modelPath": "models",
-    "viewPath": "views"
+    "viewPath": "views",
+    "publicPath": "public"
 };
 
 module.exports = config;

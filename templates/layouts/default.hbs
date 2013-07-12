@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>{{page.title}}</title>
+        <meta name="description" content="{{description}}" />
+        {{#each styleIncludes}}
+            <link rel="stylesheet" type="text/css" href="{{this}}" />
+        {{/each}}
+        {{#each scriptIncludes.head}}
+            <script type="text/javascript" src="{{this}}"></script>
+        {{/each}}
+    </head>
+    <body>
+        {{> page.content}}
+        {{#each scriptIncludes}}
+            <script type="text/javascript" src="{{this}}"></script>
+        {{/each}}
+    </body>
+</html>
