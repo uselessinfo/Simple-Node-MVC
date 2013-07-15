@@ -7,7 +7,8 @@ var express = require('express'),
 mvc.setConfig(require('./config.js'));
 
 //Load controllers
-router.loadControllers();
+mvc.loadTemplates();
+mvc.loadControllers();
 
 app.get('*', function (req, res) {
     router.route(req, res);

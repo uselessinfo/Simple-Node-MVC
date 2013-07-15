@@ -2,18 +2,19 @@
 <html>
     <head>
         <title>{{page.title}}</title>
-        <meta name="description" content="{{description}}" />
-        {{#each styleIncludes}}
+        <meta name="description" content="{{page.description}}" />
+        {{#each page.styleIncludes}}
             <link rel="stylesheet" type="text/css" href="{{this}}" />
         {{/each}}
-        {{#each scriptIncludes.head}}
+        {{#each page.headScriptIncludes}}
             <script type="text/javascript" src="{{this}}"></script>
         {{/each}}
     </head>
     <body>
-        {{> page.content}}
-        {{#each scriptIncludes}}
+        {{{page.content}}}
+        {{#each page.scriptIncludes}}
             <script type="text/javascript" src="{{this}}"></script>
         {{/each}}
+        {{> footer}}
     </body>
 </html>
