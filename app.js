@@ -11,11 +11,19 @@ mvc.loadTemplates();
 mvc.loadControllers();
 
 app.get('*', function (req, res) {
-    router.route(req, res);
+    router.route(req, res, "GET");
 });
 
 app.post('*', function (req, res) {
-    router.route(req, res);
+    router.route(req, res, "POST");
+});
+
+app.put('*', function (req, res) {
+    router.route(req, res, "PUT");
+});
+
+app.delete('*', function (req, res) {
+    router.route(req, res, "DELETE");
 });
 
 app.use(express.static(__dirname + '/public'));
